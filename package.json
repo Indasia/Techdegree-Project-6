@@ -2,7 +2,7 @@
   "name": "Techdegree-Project-6",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "indexnode .js",
   "dependencies": {
     "express": "^4.16.4",
     "pug": "^2.0.3"
