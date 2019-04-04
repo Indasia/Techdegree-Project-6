@@ -4,7 +4,7 @@ const data = require("./data.json");
 // require express
 const express = require("express");
 
-const projects = data.projects;
+// const projects = data.projects;
 
 // call express
 const app = express();
@@ -32,14 +32,8 @@ app.get("/projects/:id", (req, res) => {
 //template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
 
 
-// start the server, the port to serve the application on
-app.listen(3000, () => {
-        // log a string to the console that says which port the app is listening to.
-        console.log("Your application is now connected to port 3000!")
-});
-
 app.use((req, res, next) => {
-        const err = new Error("Congratulations, you broke the internet.");
+        const err = new Error("Not Found");
         console.log("Sorry, this page doesn't exist!");
         err.status = 404;
         next(err);
@@ -51,3 +45,20 @@ app.use((err, req, res, next) => {
         res.status(err.status)
         res.render("error");
 });
+
+// start the server, the port to serve the application on
+app.listen(3000, () => {
+        // log a string to the console that says which port the app is listening to.
+        console.log("Your application is now connected to port 3000!")
+});
+
+/*
+app.use((err, req, res, next) => {
+        res.locals.error = err;
+        if (err.status >= 100 && err.status < 600)
+                res.status(err.status);
+        else
+                res.status(500);
+        res.render('error');
+});
+*/
