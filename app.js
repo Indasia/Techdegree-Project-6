@@ -4,7 +4,7 @@ const data = require("./data.json");
 // require express
 const express = require("express");
 
-// const projects = data.projects;
+const projects = data.projects;
 
 // call express
 const app = express();
@@ -17,7 +17,7 @@ app.use("/static", express.static("public"));
 
 //An "index" route (/) to render the "Home" page with the locals set to data.projects
 app.get("/", (req, res) => {
-        res.render("index",  data.projects );
+        res.render("index", { projects } );
 });
 
 //An "about" route (/about) to render the "About" page
@@ -26,9 +26,10 @@ app.get("/about", (req, res) => {
 });
 
 //Dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project 
-app.get("/projects/:id", (req, res) => {
-        res.render()
+app.get("/projects", (req, res) => {
+        res.render("project", { projects });
 });
+
 //template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
 
 

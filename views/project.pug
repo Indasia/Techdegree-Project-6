@@ -8,21 +8,20 @@ block content
       .cell.small-6.medium-9.large-9
 
         //- Use interploation to dynamically add the project title.
-        h1 #{projects[id].project_name}
+        h1 #{project[id].project_name}
 
         //- Use interploation to dynamically add the project description.
         p.lead.text-light
-          | #{projects[id].description}
+          | #{project[id].description}
 
       .cell.portfolio-meta.small-6.medium-2.large-3
         h6 Technologies
-        #{projects[id].technologies}
+        #{project[id].technologies}
 
         //- Use an `each` iterator to replace the li tags below and interploation to dynamically add the technologies used in each project.
         ul
-          li HTML
-          li CSS
-          li JavaScript
+          each value in technologies
+            value= li
 
         //- Use template literals and interpolation to add URLs to the hrefs below so they link to the repo and the live version of each project.
         a.button.expanded(href=`${projects[id].live_link}`) Live Demo
