@@ -4,6 +4,7 @@ const data = require("./data.json");
 // require express
 const express = require("express");
 
+// variable that hold the data of the projects in data.json
 const projects = data.projects;
 
 // call express
@@ -15,32 +16,32 @@ app.set("view engine", "pug");
 // use a static route and the express.static method to serve the static files located in the public folder
 app.use("/static", express.static("public"));
 
-//An "index" route (/) to render the "Home" page with the locals set to data.projects
+// an "index" route (/) to render the "Home" page with the locals set to data.projects
 app.get("/", (req, res) => {
         res.render("index", { projects } );
 });
 
-//An "about" route (/about) to render the "About" page
+// an "about" route (/about) to render the "About" page
 app.get("/about", (req, res) => {
         res.render("about");
 });
 
-//Dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project 
+// dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project 
 app.get("/project/:id", (req, res) => {
         const id = req.params.id;
         const allProject = projects[id];
         res.render("project", allProject);
 });
 
-
-
-//template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
-
-
+// create error middleware
 app.use((req, res, next) => {
+        // new "not found" error
         const err = new Error("Not Found");
+        // log error to console
         console.log("Sorry, this page doesn't exist!");
+        // set error status to 404 status error
         err.status = 404;
+        // pass errors to express
         next(err);
 });
 
@@ -56,14 +57,3 @@ app.listen(3000, () => {
         // log a string to the console that says which port the app is listening to.
         console.log("Your application is now connected to port 3000!")
 });
-
-/*
-app.use((err, req, res, next) => {
-        res.locals.error = err;
-        if (err.status >= 100 && err.status < 600)
-                res.status(err.status);
-        else
-                res.status(500);
-        res.render('error');
-});
-*/
