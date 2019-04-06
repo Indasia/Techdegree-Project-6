@@ -21,11 +21,11 @@
         {
             "id": 2,
             "project_name": "Interactive Form",
-            "description": "In this project, I used JavaScript to enhance an interactive registration form for a fictional conference called \"FullStack Conf.\"",
+            "description": "In this project, I used JavaScript to enhance an interactive registration form for a fictional conference called \"Full Stack Conf.\"",
             "technologies": ["HTML", "CSS", "JavaScript", "jQuery"],
             "live_link": "https://indasia.github.io/Techdegree-Project-3/",
             "github_link": "https://github.com/Indasia/Techdegree-Project-3",
-            "image_urls": ["project3.png", "project3.2.png","project3.3png"]
+            "image_urls": ["project3.png", "project3.2.png","project3.3.png"]
         },
         {
             "id": 3,
@@ -39,11 +39,11 @@
         {
             "id": 4,
             "project_name": "Public API Requests" ,
-            "description": "",
+            "description": "Using JavaScript, I created an employee directory by communicating with a third-party API (Application Programming Interface).",
             "technologies": ["HTML", "CSS", "JavaScript", "AJAX", "jQuery"],
             "live_link": "https://indasia.github.io/Techdegree-Project-5/",
             "github_link": "https://github.com/Indasia/Techdegree-Project-5",
-            "image_urls": ["project5.png", "project5.2.png","project5.3.png"]
+            "image_urls": ["project5.2.png", "project5.3.png","project5.png"]
         } 
     ]
 }

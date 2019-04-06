@@ -1,16 +1,22 @@
 
 h1,h2,h3,h4,h5,p{
-  font-family: 'Merriweather', serif;
+  font-family: 'candara', sans-serif;
+    text-align: center;
 }
 
   h5{
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: 2.5px;
+    font-family: 'candara', sans-serif;
+    letter-spacing: 1.1px;
     -webkit-text-transform: uppercase;
     text-transform: uppercase;
   }
 
+  h5:hover{
+    transform: scale(1.2);
+  }
+
   h6{
+    font-family: 'candara', sans-serif;
     letter-spacing: 2.5px;
     -webkit-text-transform: uppercase;
     text-transform: uppercase;
@@ -31,11 +37,14 @@ h1,h2,h3,h4,h5,p{
 }
 
 .button{
+  font-family: 'candara', sans-serif;
   background-color: #333;
+  background-image: url("../images/specks.png");
 }
 
 .button:hover{
-  background-color: #111;
+  opacity: 0.7;
+  transition: all 0.4s
 }
 
 a{
@@ -56,20 +65,27 @@ a:hover{
   line-height: 0;
 }
 
+.image:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .portfolio-me{
   padding: 20px;
   background: #121213;
   color: #fff;
   box-shadow: none !important;
+  background-image: url("../images/specks.png");
 }
 
   .portfolio-me p{
-    font-size: 14px;
+    font-size: 15px;
     color: #999;
   }
 
   .portfolio-me a{
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'candara', sans-serif;
     font-weight: 600;
     color: #555;
     font-size: 13px;
@@ -89,13 +105,17 @@ a:hover{
 }
 
  .portfolio-breadcrumb a{
-   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   font-family: 'candara', sans-serif;
    font-weight: 600;
-   font-size: 13px;
+   font-size: 13.5px;
    letter-spacing: 2.5px;
    -webkit-text-transform: uppercase;
    text-transform: uppercase;
  }
+
+.portfolio-breadcrumb a:hover{
+  color: #999;
+}
 
 .portfolio-intro{
   margin: 0;
