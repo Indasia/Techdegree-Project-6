@@ -7,7 +7,7 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "live_link": "https://indasia.github.io/Techdegree-Project-1/",
             "github_link": "https://github.com/Indasia/Techdegree-Project-1",
-            "image_urls": []
+            "image_urls": ["static/images/project1.jpg", "static/images/project1.2.jpg","static/images/project1.3.jpg"]
         },
         {
             "id": 1,

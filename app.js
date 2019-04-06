@@ -26,9 +26,13 @@ app.get("/about", (req, res) => {
 });
 
 //Dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project 
-app.get("/projects", (req, res) => {
-        res.render("project", { projects });
+app.get("/project/:id", (req, res) => {
+        const id = req.params.id;
+        const allProject = projects[id];
+        res.render("project", allProject);
 });
+
+
 
 //template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
 
