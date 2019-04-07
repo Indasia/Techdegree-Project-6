@@ -36,7 +36,7 @@ app.get("/project/:id", (req, res) => {
 // create error middleware
 app.use((req, res, next) => {
         // new "not found" error
-        const err = new Error("Not Found");
+        const err = new Error("Uh oh! There's nothing to see here.");
         // log error to console
         console.log("Sorry, this page doesn't exist!");
         // set error status to 404 status error
